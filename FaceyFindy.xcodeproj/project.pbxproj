@@ -3,18 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE69B4C01EB2ABF70070D064 /* UIImage+crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69B4BF1EB2ABF70070D064 /* UIImage+crop.swift */; };
+		AE69B4C21EB3061A0070D064 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69B4C11EB3061A0070D064 /* Util.swift */; };
+		AE69B4C61EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69B4C51EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift */; };
 		AE9BBCB41EA94F75009AC283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCB31EA94F75009AC283 /* AppDelegate.swift */; };
 		AE9BBCB61EA94F75009AC283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCB51EA94F75009AC283 /* ViewController.swift */; };
 		AE9BBCB91EA94F75009AC283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9BBCB71EA94F75009AC283 /* Main.storyboard */; };
 		AE9BBCBB1EA94F75009AC283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9BBCBA1EA94F75009AC283 /* Assets.xcassets */; };
 		AE9BBCBE1EA94F75009AC283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9BBCBC1EA94F75009AC283 /* LaunchScreen.storyboard */; };
+		AE9BBCCA1EA955A2009AC283 /* FFFaceRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCC91EA955A2009AC283 /* FFFaceRecognizer.mm */; };
+		AE9BBCCD1EAA5827009AC283 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCCC1EAA5827009AC283 /* UIImage+OpenCV.mm */; };
+		AE9BBCD11EAA8C86009AC283 /* FaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCD01EAA8C86009AC283 /* FaceModel.swift */; };
+		CC306657085AF39E17CD91FD /* Pods_FaceyFindy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA92760273D15A62C04F2628 /* Pods_FaceyFindy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F164A906491FE2B61EAC8FA /* Pods-FaceyFindy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceyFindy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceyFindy/Pods-FaceyFindy.debug.xcconfig"; sourceTree = "<group>"; };
+		AE69B4BF1EB2ABF70070D064 /* UIImage+crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+crop.swift"; sourceTree = "<group>"; };
+		AE69B4C11EB3061A0070D064 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		AE69B4C51EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SwiftyCamViewControllerDelegate.swift"; sourceTree = "<group>"; };
 		AE9BBCB01EA94F75009AC283 /* FaceyFindy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceyFindy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9BBCB31EA94F75009AC283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9BBCB51EA94F75009AC283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,14 @@
 		AE9BBCBA1EA94F75009AC283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE9BBCBD1EA94F75009AC283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE9BBCBF1EA94F75009AC283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9BBCC71EA955A1009AC283 /* FaceyFindy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceyFindy-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE9BBCC81EA955A2009AC283 /* FFFaceRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFaceRecognizer.h; sourceTree = "<group>"; };
+		AE9BBCC91EA955A2009AC283 /* FFFaceRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FFFaceRecognizer.mm; sourceTree = "<group>"; };
+		AE9BBCCB1EAA5827009AC283 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		AE9BBCCC1EAA5827009AC283 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		AE9BBCD01EAA8C86009AC283 /* FaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceModel.swift; sourceTree = "<group>"; };
+		B9307F5BBCBCFE5D47ECA751 /* Pods-FaceyFindy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceyFindy.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceyFindy/Pods-FaceyFindy.release.xcconfig"; sourceTree = "<group>"; };
+		DA92760273D15A62C04F2628 /* Pods_FaceyFindy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceyFindy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC306657085AF39E17CD91FD /* Pods_FaceyFindy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A12178871817720BEEAC39D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA92760273D15A62C04F2628 /* Pods_FaceyFindy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BB96181E3E8ACEDF82F58E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F164A906491FE2B61EAC8FA /* Pods-FaceyFindy.debug.xcconfig */,
+				B9307F5BBCBCFE5D47ECA751 /* Pods-FaceyFindy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AE9BBCA71EA94F75009AC283 = {
 			isa = PBXGroup;
 			children = (
 				AE9BBCB21EA94F75009AC283 /* FaceyFindy */,
 				AE9BBCB11EA94F75009AC283 /* Products */,
+				4BB96181E3E8ACEDF82F58E2 /* Pods */,
+				1A12178871817720BEEAC39D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +93,39 @@
 		AE9BBCB21EA94F75009AC283 /* FaceyFindy */ = {
 			isa = PBXGroup;
 			children = (
+				AE9BBCD41EAA8D99009AC283 /* lib */,
 				AE9BBCB31EA94F75009AC283 /* AppDelegate.swift */,
 				AE9BBCB51EA94F75009AC283 /* ViewController.swift */,
 				AE9BBCB71EA94F75009AC283 /* Main.storyboard */,
 				AE9BBCBA1EA94F75009AC283 /* Assets.xcassets */,
 				AE9BBCBC1EA94F75009AC283 /* LaunchScreen.storyboard */,
 				AE9BBCBF1EA94F75009AC283 /* Info.plist */,
+				AE9BBCC71EA955A1009AC283 /* FaceyFindy-Bridging-Header.h */,
 			);
 			path = FaceyFindy;
+			sourceTree = "<group>";
+		};
+		AE9BBCD41EAA8D99009AC283 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				AE9BBCD51EAA8DF8009AC283 /* FFFaceRecognizer */,
+				AE9BBCD01EAA8C86009AC283 /* FaceModel.swift */,
+				AE69B4BF1EB2ABF70070D064 /* UIImage+crop.swift */,
+				AE69B4C11EB3061A0070D064 /* Util.swift */,
+				AE69B4C51EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		AE9BBCD51EAA8DF8009AC283 /* FFFaceRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				AE9BBCC81EA955A2009AC283 /* FFFaceRecognizer.h */,
+				AE9BBCC91EA955A2009AC283 /* FFFaceRecognizer.mm */,
+				AE9BBCCB1EAA5827009AC283 /* UIImage+OpenCV.h */,
+				AE9BBCCC1EAA5827009AC283 /* UIImage+OpenCV.mm */,
+			);
+			name = FFFaceRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE9BBCC21EA94F75009AC283 /* Build configuration list for PBXNativeTarget "FaceyFindy" */;
 			buildPhases = (
+				1793AE4CB685CF0BDD1B4706 /* [CP] Check Pods Manifest.lock */,
 				AE9BBCAC1EA94F75009AC283 /* Sources */,
 				AE9BBCAD1EA94F75009AC283 /* Frameworks */,
 				AE9BBCAE1EA94F75009AC283 /* Resources */,
+				5C915844F3276453B0D2F785 /* [CP] Embed Pods Frameworks */,
+				007F454CEBF989569BEC1816 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,12 +163,13 @@
 				TargetAttributes = {
 					AE9BBCAF1EA94F75009AC283 = {
 						CreatedOnToolsVersion = 8.3.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = AE9BBCAB1EA94F75009AC283 /* Build configuration list for PBXProject "FaceyFindy" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -131,13 +199,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		007F454CEBF989569BEC1816 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceyFindy/Pods-FaceyFindy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1793AE4CB685CF0BDD1B4706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C915844F3276453B0D2F785 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FaceyFindy/Pods-FaceyFindy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE9BBCAC1EA94F75009AC283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AE9BBCB61EA94F75009AC283 /* ViewController.swift in Sources */,
+				AE9BBCD11EAA8C86009AC283 /* FaceModel.swift in Sources */,
 				AE9BBCB41EA94F75009AC283 /* AppDelegate.swift in Sources */,
+				AE69B4C21EB3061A0070D064 /* Util.swift in Sources */,
+				AE69B4C01EB2ABF70070D064 /* UIImage+crop.swift in Sources */,
+				AE69B4C61EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift in Sources */,
+				AE9BBCCD1EAA5827009AC283 /* UIImage+OpenCV.mm in Sources */,
+				AE9BBCCA1EA955A2009AC283 /* FFFaceRecognizer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,24 +380,41 @@
 		};
 		AE9BBCC31EA94F75009AC283 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F164A906491FE2B61EAC8FA /* Pods-FaceyFindy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SN594CXE53;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FaceyFindy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = warmlabs.FaceyFindy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceyFindy/FaceyFindy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		AE9BBCC41EA94F75009AC283 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9307F5BBCBCFE5D47ECA751 /* Pods-FaceyFindy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = SN594CXE53;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FaceyFindy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = warmlabs.FaceyFindy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceyFindy/FaceyFindy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +438,7 @@
 				AE9BBCC41EA94F75009AC283 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

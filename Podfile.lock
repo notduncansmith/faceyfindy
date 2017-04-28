@@ -1,0 +1,29 @@
+PODS:
+  - DBDebugToolkit (0.1.4)
+  - Interstellar (2.0.0):
+    - Interstellar/Core (= 2.0.0)
+    - Interstellar/Warpdrive (= 2.0.0)
+  - Interstellar/Core (2.0.0)
+  - Interstellar/Warpdrive (2.0.0):
+    - Interstellar/Core
+  - OpenCV (2.4.13.2)
+  - RKDropdownAlert (0.3.0)
+  - SwiftyCam (2.2.1)
+
+DEPENDENCIES:
+  - DBDebugToolkit
+  - Interstellar
+  - OpenCV (~> 2.4)
+  - RKDropdownAlert
+  - SwiftyCam
+
+SPEC CHECKSUMS:
+  DBDebugToolkit: de365ed55de652fe801d73fae4ee2adebf4a4d99
+  Interstellar: 63a760ff3a3657f791a4523de4b89727c51edec3
+  OpenCV: 9b4c0c599766638d74a92911f4783836c02262f3
+  RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
+  SwiftyCam: 966b67eeab2dfcfd0077eaa3c5a6bd69e1748af0
+
+PODFILE CHECKSUM: 54645abd66e9db3218a27d2b2d3f5ec869743b08
+
+COCOAPODS: 1.1.1
