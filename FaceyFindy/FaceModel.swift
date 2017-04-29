@@ -40,9 +40,9 @@ class FaceModel {
       let ci = CIImage(cgImage: cg)
       let features = sharedFaceDetector.features(in: ci)
       
-      return features.map { face in
-        return face.bounds
-      }
+      return features
+      .filter { $0.type == CIFeatureTypeFace }
+      .map { $0.bounds }
     }
     else {
       print("Failed to read features from detector.")
