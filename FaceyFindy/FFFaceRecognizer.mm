@@ -33,12 +33,12 @@ using namespace cv;
 }
 
 
-- (NSString *)predict:(UIImage*)img confidence:(double *)confidence {
+- (NSString *)predict:(UIImage *)img distance:(double *)distance {
     
     cv::Mat src = [img cvMatRepresentationGray];
     int label;
   
-    self->_faceClassifier->predict(src, label, *confidence);
+    self->_faceClassifier->predict(src, label, *distance);
     
     return _labelsDictionary[@(label)];
 }
