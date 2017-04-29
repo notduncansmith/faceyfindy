@@ -34,3 +34,21 @@ func toast(_ message: String) {
     textColor: UIColor.lightText,
     time: 1)
 }
+
+extension UIImage {
+  func crop(to rect: CGRect) -> UIImage? {
+    if let cg = self.cgImage {
+      if let cropped = cg.cropping(to: rect) {
+        return UIImage(cgImage: cropped, scale: scale, orientation: imageOrientation)
+      }
+      else {
+        print("Unable to crop image \(self.size) to \(rect)")
+      }
+    }
+    else {
+      print("Unable to crop non-CGImage-based images for now")
+    }
+    
+    return nil
+  }
+}
