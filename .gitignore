@@ -1,3 +1,6 @@
 Pods/
 *.generated.swift
+build/
+DerivedData/
+xcuserdata/
 
