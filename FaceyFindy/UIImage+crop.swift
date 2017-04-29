@@ -11,10 +11,27 @@ import Foundation
 extension UIImage {
   func crop(to rect: CGRect) -> UIImage {
     if let cg = self.cgImage {
-      return UIImage(cgImage: cg.cropping(to: rect)!, scale: self.scale, orientation: self.imageOrientation)
-    } else {
-      print("Unable to crop non-CGImage-based images for now")
-      return self
+      let offset = CGRect(
+        origin: CGPoint(
+          x: rect.origin.x,
+          y: self.size.width - rect.origin.y - rect.height
+        ),
+        size: rect.size
+      )
+      
+      print("\(rect.origin.x) , \(rect.origin.y)")
+      
+      if let cropped = cg.cropping(to: offset) {
+        return UIImage(cgImage: cropped, scale: scale, orientation: imageOrientation)
+      }
+      else {
+        print("Unable to crop image \(self.size) to \(offset) (computed from \(rect))")
+      }
     }
+    else {
+      print("Unable to crop non-CGImage-based images for now")
+    }
+    
+    return self
   }
 }

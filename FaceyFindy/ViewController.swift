@@ -14,6 +14,7 @@ class ViewController : SwiftyCamViewController {
   @IBOutlet weak var trainingModeSwitch: UISwitch!
   @IBOutlet weak var faceWindow: UIImageView!
   
+  let indicatorView = UIView()
   let rawIncomingImages = Observable<UIImage>()
   let incomingFaceImages = Observable<UIImage>()
   let predictions = Observable<(String, Int)>()
@@ -30,6 +31,13 @@ class ViewController : SwiftyCamViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let viewSize = view.bounds.size
+    
+    view.addSubview(indicatorView)
+    view.bringSubview(toFront: indicatorView)
+    indicatorView.layer.borderColor = UIColor.cyan.cgColor
+    indicatorView.layer.borderWidth = 2
+    
     view.bringSubview(toFront: faceWindow)
     view.bringSubview(toFront: trainingModeSwitch)
     
@@ -37,10 +45,34 @@ class ViewController : SwiftyCamViewController {
     
     rawIncomingImages.subscribe { image in
       let faceRects = FaceModel.faceRects(from: image)
+      let ci = CIImage(cgImage: image.cgImage!)
+      let ciImageSize = ci.extent.size
+      let isMirrored = (self.currentCamera == .front)
+      let indicatorScaleHeight = viewSize.height / ciImageSize.width
+      var indicatorScaleWidth = viewSize.width / ciImageSize.height
+      
+      if (isMirrored) {
+        indicatorScaleWidth *= -1
+      }
       
       faceRects.forEach { faceRect in
+        // This transform transposes the image from the coreimage
+        // coordinates to uikit's coordinate system
+        let indicatorTransform = CGAffineTransform(
+          a: 0, b: indicatorScaleHeight, c: indicatorScaleWidth,
+          d: 0, tx: 0, ty: 0
+        )
+        
+        self.indicatorView.frame = faceRect.applying(indicatorTransform)
+        self.indicatorView.alpha = 1.0
+        
         let faceImage = image.crop(to: faceRect)
+
         self.incomingFaceImages.update(faceImage)
+      }
+      
+      if faceRects.isEmpty {
+        self.indicatorView.alpha = 0.0
       }
     }
     
