@@ -14,8 +14,6 @@
 
 - (NSString *)predict:(UIImage*)img distance:(double *)distance;
 
-- (NSArray *)updateWithFace:(UIImage *)img name:(NSString *)name;
-
-- (NSArray *)labels;
+- (void)updateWithFace:(UIImage *)img label:(int)label;
 
 @end

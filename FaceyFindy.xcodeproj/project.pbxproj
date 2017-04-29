@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE69B4C01EB2ABF70070D064 /* UIImage+crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69B4BF1EB2ABF70070D064 /* UIImage+crop.swift */; };
 		AE69B4C21EB3061A0070D064 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69B4C11EB3061A0070D064 /* Util.swift */; };
-		AE69B4C61EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE69B4C51EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift */; };
+		AE9B00DD1EB439EC00CEA828 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B00DC1EB439EC00CEA828 /* Face.swift */; };
 		AE9BBCB41EA94F75009AC283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCB31EA94F75009AC283 /* AppDelegate.swift */; };
 		AE9BBCB61EA94F75009AC283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCB51EA94F75009AC283 /* ViewController.swift */; };
 		AE9BBCB91EA94F75009AC283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9BBCB71EA94F75009AC283 /* Main.storyboard */; };
@@ -17,15 +16,13 @@
 		AE9BBCBE1EA94F75009AC283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9BBCBC1EA94F75009AC283 /* LaunchScreen.storyboard */; };
 		AE9BBCCA1EA955A2009AC283 /* FFFaceRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCC91EA955A2009AC283 /* FFFaceRecognizer.mm */; };
 		AE9BBCCD1EAA5827009AC283 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCCC1EAA5827009AC283 /* UIImage+OpenCV.mm */; };
-		AE9BBCD11EAA8C86009AC283 /* FaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBCD01EAA8C86009AC283 /* FaceModel.swift */; };
 		CC306657085AF39E17CD91FD /* Pods_FaceyFindy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA92760273D15A62C04F2628 /* Pods_FaceyFindy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F164A906491FE2B61EAC8FA /* Pods-FaceyFindy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceyFindy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceyFindy/Pods-FaceyFindy.debug.xcconfig"; sourceTree = "<group>"; };
-		AE69B4BF1EB2ABF70070D064 /* UIImage+crop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+crop.swift"; sourceTree = "<group>"; };
 		AE69B4C11EB3061A0070D064 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		AE69B4C51EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SwiftyCamViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		AE9B00DC1EB439EC00CEA828 /* Face.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		AE9BBCB01EA94F75009AC283 /* FaceyFindy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceyFindy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9BBCB31EA94F75009AC283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9BBCB51EA94F75009AC283 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +35,6 @@
 		AE9BBCC91EA955A2009AC283 /* FFFaceRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FFFaceRecognizer.mm; sourceTree = "<group>"; };
 		AE9BBCCB1EAA5827009AC283 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
 		AE9BBCCC1EAA5827009AC283 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
-		AE9BBCD01EAA8C86009AC283 /* FaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceModel.swift; sourceTree = "<group>"; };
 		B9307F5BBCBCFE5D47ECA751 /* Pods-FaceyFindy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceyFindy.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceyFindy/Pods-FaceyFindy.release.xcconfig"; sourceTree = "<group>"; };
 		DA92760273D15A62C04F2628 /* Pods_FaceyFindy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceyFindy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,10 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				AE9BBCD51EAA8DF8009AC283 /* FFFaceRecognizer */,
-				AE9BBCD01EAA8C86009AC283 /* FaceModel.swift */,
-				AE69B4BF1EB2ABF70070D064 /* UIImage+crop.swift */,
 				AE69B4C11EB3061A0070D064 /* Util.swift */,
-				AE69B4C51EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift */,
+				AE9B00DC1EB439EC00CEA828 /* Face.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -252,12 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9B00DD1EB439EC00CEA828 /* Face.swift in Sources */,
 				AE9BBCB61EA94F75009AC283 /* ViewController.swift in Sources */,
-				AE9BBCD11EAA8C86009AC283 /* FaceModel.swift in Sources */,
 				AE9BBCB41EA94F75009AC283 /* AppDelegate.swift in Sources */,
 				AE69B4C21EB3061A0070D064 /* Util.swift in Sources */,
-				AE69B4C01EB2ABF70070D064 /* UIImage+crop.swift in Sources */,
-				AE69B4C61EB30AF70070D064 /* ViewController+SwiftyCamViewControllerDelegate.swift in Sources */,
 				AE9BBCCD1EAA5827009AC283 /* UIImage+OpenCV.mm in Sources */,
 				AE9BBCCA1EA955A2009AC283 /* FFFaceRecognizer.mm in Sources */,
 			);
