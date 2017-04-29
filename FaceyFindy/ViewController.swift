@@ -110,4 +110,8 @@ class ViewController : SwiftyCamViewController {
   func displayInWindow(image: UIImage) {
     faceWindow.image = image
   }  
+extension ViewController : SwiftyCamViewControllerDelegate {
+  func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
+    rawIncomingImages.update(photo)
+  }
 }
