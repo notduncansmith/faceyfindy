@@ -55,6 +55,10 @@ class ViewController : SwiftyCamViewController {
         let overlayRect = self.overlay(forFace: face)
         self.showIndicator(at: overlayRect)
         
+        if let faceImage = face.image {
+          self.displayInWindow(image: faceImage)
+        }
+        
         if (self.trainingModeSwitch.isOn) {
           self.trainingFaces.update(face)
         }
@@ -87,7 +91,7 @@ class ViewController : SwiftyCamViewController {
   func predictLabelsForTestFaces() {
     testingFaces.subscribe { face in
       if (self.trainingCount > self.minTrainingImages) {
-        let distance = face.distanceFromNearestMatch()
+        let distance = Int(floor(face.distanceFromNearestMatch()))
         toast("Distance to closest match (\"\(self.currentModelName)\"): \(distance)")
       }
     }
