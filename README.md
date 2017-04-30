@@ -26,19 +26,19 @@ Finally, it makes the shutter sound multiple times per second, so don't use this
 
 ## Future enhancements
 
-[ ] Support multiple (saved/named) models
+- [ ] Support multiple (saved/named) models
 
-[ ] Support non-camera data sources (image search, Facebook friends, etc)
+- [ ] Support non-camera data sources (image search, Facebook friends, etc)
 
-[ ] Support pruning model inputs (editable photo grid or something)
+- [ ] Support pruning model inputs (editable photo grid or something)
 
-[ ] Include models for a few well-known faces
+- [ ] Include models for a few well-known faces
 
-[ ] Add automated tests for functionality and accuracy
+- [ ] Add automated tests for functionality and accuracy
 
-[ ] Improve accuracy (detection and recognition)
+- [ ] Improve accuracy (detection and recognition)
 
-[ ] Improve prediction UI (as 🔥 as a rapid stream of labels is, it'd be neat to have something more organic-feeling)
+- [ ] Improve prediction UI (as 🔥 as a rapid stream of labels is, it'd be neat to have something more organic-feeling)
 
 ## Learnings
 
