@@ -2,7 +2,7 @@
 
 This iPhone app allows you to train and use a facial recognition model with your camera.
 
-<img src="https://raw.githubusercontent.com/notduncansmith/faceyfindy/master/ffdemo-480p.gif" />
+<img src="https://github.com/notduncansmith/faceyfindy/raw/master/ffdemo-480p.gif" />
 
 ## How it works
 
