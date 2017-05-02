@@ -97,8 +97,14 @@ class ViewController : SwiftyCamViewController {
   func predictLabelsForTestFaces() {
     testingFaces.subscribe { face in
       if (self.trainingCount > self.minTrainingImages) {
-        let distance = Int(floor(face.distanceFromNearestMatch()))
-        toast("Distance to closest match (\"\(self.currentModelName)\"): \(distance)")
+        let (label, distance) = face.nearestMatch()
+        
+        if let matchedLabel = label {
+          toast("Distance to closest match (\"\(matchedLabel)\"): \(distance)")
+        }
+        else {
+          toast("No match (distance \(distance))")
+        }
       }
     }
   }
