@@ -18,8 +18,6 @@ using namespace cv;
     Ptr<FaceRecognizer> _faceClassifier;
 }
 
-@property (nonatomic, strong) NSMutableDictionary *labelsDictionary;
-
 @end
 
 @implementation FFFaceRecognizer
@@ -33,14 +31,14 @@ using namespace cv;
 }
 
 
-- (NSString *)predict:(UIImage *)img distance:(double *)distance {
+- (int)predict:(UIImage *)img distance:(double *)distance {
     
     cv::Mat src = [img cvMatRepresentationGray];
     int label;
   
     self->_faceClassifier->predict(src, label, *distance);
     
-    return _labelsDictionary[@(label)];
+    return label;
 }
 
 - (void)updateWithFace:(UIImage *)img label:(int)label {

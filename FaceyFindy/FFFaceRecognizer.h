@@ -12,7 +12,7 @@
 
 + (FFFaceRecognizer *)lbphRecognizer;
 
-- (NSString *)predict:(UIImage*)img distance:(double *)distance;
+- (int)predict:(UIImage*)img distance:(double *)distance;
 
 - (void)updateWithFace:(UIImage *)img label:(int)label;
 

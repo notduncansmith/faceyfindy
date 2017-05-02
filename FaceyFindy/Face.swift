@@ -18,7 +18,8 @@ struct Face {
       CIDetectorNumberOfAngles: 9
     ]
   )!
-  static var stringLabels = [String:Int32]()
+  private static var sharedStringLabels = [String:Int32]()
+  private static var sharedIntLabels = [Int32:String]()
   
   var originalImage: UIImage!
   var bounds: CGRect!
@@ -45,25 +46,34 @@ struct Face {
     }
   }
   
+  func nearestMatch() -> (label: String?, distance: Int) {
+    var distance = Double()
+    let intLabel = Face.sharedRecognizer.predict(image, distance: &distance)
+    
+    return (label: Face.sharedIntLabels[intLabel], distance: Int(floor(distance)))
+  }
+  
   func attachLabel(_ stringLabel: String) {
-    // Not sure how to propagate the error here
-    // FWIW if image is unavailable it'll make loud noises elsewhere
     if let img = image {
-      if let intLabel = Face.stringLabels[stringLabel] {
+      if let intLabel = Face.sharedStringLabels[stringLabel] {
         Face.sharedRecognizer.update(withFace: img, label: intLabel)
       }
       else {
         // Not thread-safe
-        let intLabel = Int32(Face.stringLabels.count)
-        Face.stringLabels[stringLabel] = intLabel
+        let intLabel = Int32(Face.sharedStringLabels.count)
+        Face.sharedIntLabels[intLabel] = stringLabel
+        Face.sharedStringLabels[stringLabel] = intLabel
         Face.sharedRecognizer.update(withFace: img, label: intLabel)
       }
+    }
+    else {
+      // There's no image, so nothing to do here
     }
   }
   
   // Return the original UIImage cropped to just the face
   func cropped() -> UIImage? {
-    var adjusted = bounds! // We call cropped() in the initializer, thus Optional-wrapped
+    var adjusted = bounds! // We call this in the initializer, thus bounds is Optional-wrapped
     
     // Images from SwiftyCam (and JPEGs without EXIF metadata specifying otherwise) are
     // rotated 90 degrees counterclockwise from their intuitive orientation. This means
