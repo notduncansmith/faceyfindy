@@ -56,6 +56,10 @@ class ViewController : SwiftyCamViewController {
     rawIncomingImages.subscribe { image in
       let faces = Face.findAll(in: image)
       
+      if faces.isEmpty {
+        self.hideIndicator()
+      }
+      
       faces.forEach { face in
         let overlayRect = self.overlay(forFace: face)
         self.showIndicator(at: overlayRect)
@@ -70,10 +74,6 @@ class ViewController : SwiftyCamViewController {
         else {
           self.testingFaces.update(face)
         }
-      }
-      
-      if faces.isEmpty {
-        self.hideIndicator()
       }
     }
     
