@@ -77,6 +77,7 @@ class ViewController : SwiftyCamViewController {
       }
     }
     
+    // Gives the app time to initialize and not crash
     after(seconds: 0.5) {
       self.stopTakingPhotos = every(seconds: self.photoInterval) {
         self.takePhoto()
@@ -114,7 +115,7 @@ class ViewController : SwiftyCamViewController {
     faceWindow.image = image
   }
   
-  // Overlay the indicator onto a particular face
+  // Get the overlay rect for a particular face
   func overlay(forFace face: Face) -> CGRect {
     let ci = CIImage(cgImage: face.originalImage.cgImage!)
     let ciSize = ci.extent.size
