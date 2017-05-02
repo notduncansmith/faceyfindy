@@ -74,11 +74,11 @@ struct Face {
     return originalImage.crop(to: adjusted)
   }
   
-  func distanceFromNearestMatch(_ recognizer: FFFaceRecognizer = Face.sharedRecognizer) -> Double {
+  func distanceFromNearestMatch() -> Double {
     var distance = Double()
     
     // Because we're only using one face, ignore the label returned
-    let _: String? = recognizer.predict(image, distance: &distance)
+    let _ = Face.sharedRecognizer.predict(image, distance: &distance)
     
     return distance
   }
