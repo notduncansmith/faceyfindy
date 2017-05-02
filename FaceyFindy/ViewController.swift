@@ -29,6 +29,11 @@ class ViewController : SwiftyCamViewController {
   var trainingCount = 0
   var frameTimer = Timer()
   var stopTakingPhotos: Block?
+  var isTrainingMode: Bool {
+    get {
+      return self.trainingModeSwitch.isOn
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -59,7 +64,7 @@ class ViewController : SwiftyCamViewController {
           self.displayInWindow(image: faceImage)
         }
         
-        if (self.trainingModeSwitch.isOn) {
+        if (self.isTrainingMode) {
           self.trainingFaces.update(face)
         }
         else {
