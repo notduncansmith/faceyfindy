@@ -9,8 +9,8 @@
 import Foundation
 
 struct Face {
-  static let sharedRecognizer = FFFaceRecognizer.lbph()!
-  static let sharedDetector = CIDetector(
+  private static let sharedRecognizer = FFFaceRecognizer.lbph()!
+  private static let sharedDetector = CIDetector(
     ofType: CIDetectorTypeFace,
     context: nil,
     options: [
