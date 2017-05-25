@@ -25,7 +25,7 @@ struct Face {
   var bounds: CGRect!
   var image: UIImage?
   
-  init(in image: UIImage!, at rect: CGRect!, forgettable: Bool = false) {
+  init(in image: UIImage!, at rect: CGRect!) {
     self.originalImage = image
     self.bounds = rect
     self.image = self.cropped()
