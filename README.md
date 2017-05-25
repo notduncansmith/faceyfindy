@@ -46,7 +46,7 @@ Finally, it makes the shutter sound multiple times per second, so don't use this
 
 - Processing images with `CoreImage` and `CGAffineTransform`s
 
-  - This was harder than it looked by a mile. Many online tutorials for drawing boxes around faces fail to correctly handle image orientation, but look like they work because they're tested on non-mirrored stock images where a face appears dead-center and thus fails to reveal orientation issues.
+  - This was harder than it looked by a mile. Many online tutorials for drawing boxes around faces fail to correctly handle image orientation, but look like they work because they're tested on non-mirrored stock images where a face appears dead-center and thus fails to reveal orientation issues. Also, the docs around matrix transforms have [issues](http://www.joeschwartz.com/2014/10/02/video-preview-and-facial-recognition-in-swift/).
 
 - Debug/etc flags in Swift projects (more convenient than they used to be, apparently)
 
